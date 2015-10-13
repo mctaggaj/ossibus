@@ -1,0 +1,21 @@
+@import "variables";
+@import "utills";
+
+
+.col(@prefix, @suffix, @num, @max) when (@num > 0) {
+  .col(@num: @num - 1, @prefix:@prefix, @suffix: @suffix, @max: @max);
+  .@{prefix}@{num}@{suffix} {
+    width: @num/@max*100%;
+    &:extend(.colFloat);
+  }
+}
+
+.cols (@prefix:@colPrefix, @suffix:@allSuffix, @num: @colNum, @max: @colNum){
+  .colFloat {
+    float: @colFloat;
+  }
+  .col(@prefix: @prefix, @suffix: @suffix, @num: @num, @max: @max);
+  .@{prefix}last@{suffix} {
+    .blockFormattingContext();
+  }
+}

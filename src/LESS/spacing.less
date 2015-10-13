@@ -1,0 +1,15 @@
+@import "variables";
+.spacing(@suffix:@allSuffix) {
+  .inner {
+    max-width: @spacingMaxWidth;
+    margin: auto;
+    padding: @spacingGutter;
+    .gutter {
+      padding: @spacingGutter;
+    }
+    .row {
+      margin: -@spacingGutter;
+    }
+  }
+
+}

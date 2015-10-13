@@ -1,0 +1,33 @@
+
+@separator: ~'-';
+
+@xsSuffix: ~'@{separator}xs';
+@smSuffix: ~'@{separator}sm';
+@mdSuffix: ~'@{separator}md';
+@lgSuffix: ~'@{separator}lg';
+@xlSuffix: ~'@{separator}xl';
+@allSuffix: ~'';
+
+@xsWidth:350;
+@smWidth:580;
+@mdWidth:780;
+@lgWidth:1024;
+@xlWidth:(@lgWidth + 1);
+
+@xs: ~"(max-width: @{xsWidth}px)";
+@sm: ~"(max-width: @{smWidth}px)";
+@md: ~"(max-width: @{mdWidth}px)";
+@lg: ~"(max-width: @{lgWidth}px)";
+@xl: ~"(min-width: @{xlWidth}px)";
+@all: ~'all';
+
+
+/********** COLS ***********/
+@colPrefix: ~'col@{separator}';
+@colNum: 12;
+@colFloat: left;
+
+
+/********* SPACING *********/
+@spacingMaxWidth: 1024;
+@spacingGutter: 10px;
